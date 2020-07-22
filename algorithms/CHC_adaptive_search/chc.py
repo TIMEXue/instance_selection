@@ -116,3 +116,5 @@ class CHC:
             order = random.sample([i for i in range(self.n_gene)], bit_split)
             for idx in order:
                 element[idx] = 1 - element[idx]
+
+        self.d = self.divergence_rate * (1.0 - self.divergence_rate) * self.n_gene
