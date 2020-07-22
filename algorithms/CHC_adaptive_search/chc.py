@@ -6,6 +6,9 @@ from sklearn import neighbors
 
 
 class CHC:
+    """
+    paper: https://www.sciencedirect.com/science/article/pii/B9780080506845500203
+    """
     def __init__(self, n_generation: int,
                        n_population: int,
                        n_sample: int,
