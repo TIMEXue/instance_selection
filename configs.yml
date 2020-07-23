@@ -1,0 +1,6 @@
+EVOLUTION:
+  n_generation: 10000
+  n_population: 50
+  size_class: [10, 10, 10]
+  divergence_rate:
+  alpha: 0.5

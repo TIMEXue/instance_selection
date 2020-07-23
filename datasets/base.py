@@ -3,8 +3,10 @@ import matplotlib.pyplot as plt
 from sklearn import neighbors, datasets
 from sklearn.model_selection import cross_val_score, cross_validate, KFold
 
+from abc import ABCMeta, abstractmethod
 
-class Pen_Based_Recognition(object):
+
+class DatasetBase(object, metaclass=ABCMeta):
     def __init__(self, train_path, test_path):
         self.train_path = train_path
         self.test_path = test_path
@@ -32,8 +34,8 @@ class Pen_Based_Recognition(object):
 
 if __name__ == '__main__':
 
-    pen_based_recognition = Pen_Based_Recognition(train_path='raw_data/pendigits.tra',
-                                                  test_path='raw_data/pendigits.tes')
+    pen_based_recognition = DatasetBase(train_path='raw_data/pendigits.tra',
+                                        test_path='raw_data/pendigits.tes')
 
 
     # iris = datasets.load_iris()
