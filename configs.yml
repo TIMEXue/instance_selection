@@ -2,5 +2,5 @@ EVOLUTION:
   n_generation: 10000
   n_population: 50
   size_class: [10, 10, 10]
-  divergence_rate:
+  divergence_rate: 0.35
   alpha: 0.5
