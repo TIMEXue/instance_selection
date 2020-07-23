@@ -37,35 +37,7 @@ if __name__ == '__main__':
     pen_based_recognition = DatasetBase(train_path='raw_data/pendigits.tra',
                                         test_path='raw_data/pendigits.tes')
 
-
-    # iris = datasets.load_iris()
-    # iris_X = iris.data
-    # iris_y = iris.target
-    # print(iris_X.shape)
-    # print(iris_y.shape)
-    # print('Number of classes: %d' % len(np.unique(iris_y)))
-    # print('Number of data points: %d' % len(iris_y))
-    #
-    # X0 = iris_X[iris_y == 0, :]
-    # print('\nSamples from class 0:\n', X0[:5, :])
-    #
-    # X1 = iris_X[iris_y == 1, :]
-    # print('\nSamples from class 1:\n', X1[:5, :])
-    #
-    # X2 = iris_X[iris_y == 2, :]
-    # print('\nSamples from class 2:\n', X2[:5, :])
-    #
     clf = neighbors.KNeighborsClassifier(n_neighbors=1, p=2)
-    # scores = cross_validate(clf,
-    #                         pen_based_recognition.train_data,
-    #                         pen_based_recognition.test_data,
-    #                         cv=10,
-    #                         return_estimator=True)
-    # print(scores['test_score'])
-    # print(scores.keys())
-    # model = scores['estimator']
-    # print(model)
-    # print(model.score(pen_based_recognition.train_data, pen_based_recognition.test_data))
 
     kf = KFold(n_splits=10, shuffle=True)
     kf.get_n_splits(pen_based_recognition.X_data, pen_based_recognition.y_data)
