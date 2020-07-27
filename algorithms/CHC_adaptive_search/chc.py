@@ -136,8 +136,9 @@ class CHC:
         save_v = -1
         save_e = None
         for e in self.population:
-            if self.fitness(e) > save_v:
-                save_v = self.fitness(e)
+            fit = self.fitness(e)
+            if fit > save_v:
+                save_v = fit
                 save_e = e
 
         for _ in range(self.n_population):
