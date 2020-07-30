@@ -19,5 +19,5 @@ python evalution.py
 # Result
 | source | % reduction  | ACC  |
 | :-----: | :-: | :-: |
-| Paper | ~99.29 | 93.31 |
-| Our | 54.26 | 97.17 |
+| Paper | ~99.29 | 94.18 -> 93.53 |
+| Our | 54.26 | 97.74 -> 97.17 |
