@@ -3,7 +3,7 @@
 - This work implement CHC algorithm
 
 # Requirements
-- Python 3.6
+- Python 3.7
 
 # Training and Testing
 Training 
